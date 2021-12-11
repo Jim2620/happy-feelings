@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import "./style.css";
 
-const firstDialog = "First Dialog";
-const secondDialog = "Second Dialog";
+const firstDialog = "How are you doing today?";
+const secondDialog = "I'm listening....";
 const thirdDialog = "Third Dialog";
 
 export default function App() {
@@ -13,7 +13,7 @@ export default function App() {
   };
 
   let dialog = firstDialog;
-  let bgColor = "yellow";
+  let bgColor = "rgb(255, 253, 181)";
 
   if (textValue.length > 20) {
     dialog = secondDialog;
@@ -27,29 +27,21 @@ export default function App() {
 
   return (
     <div>
-      <div
-        style={{
-          display: "flex",
-          alignItems: "center",
-          justifyContent: "center",
-          background: bgColor,
-        }}
-      >
+      <div>
         <form>
-          <p>{dialog}</p>
+          <p className="question">{dialog}</p>
           <textarea
-            style={{
-              width: 750,
-              height: 250,
-              display: "block",
-              marginLeft: "auto",
-              marginRight: "auto",
-            }}
+            className="textArea"
+            style={{ background: bgColor }}
+            rows="15"
+            cols="75"
             placeholder="Tell me what happened..."
             value={textValue}
             onChange={handleChange}
           ></textarea>
-          <button type="submit">I'll tell you what I think</button>
+          <button className="button" type="submit">
+            I'll tell you what I think
+          </button>
         </form>
       </div>
     </div>
