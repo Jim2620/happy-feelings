@@ -36,7 +36,6 @@ export default function App() {
         value={textValue}
         onChange={handleChange}
       ></textarea>
-
       <button type="submit">I'll tell you what I think</button>
     </div>
   );
