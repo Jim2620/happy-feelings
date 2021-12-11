@@ -18,25 +18,34 @@ h1, p {
     font-family: Lato;
   }
 
-* {
+/* * {
   background-image: url(https://bestanimations.com/media/fall/1535493271falling-leaves-tree-alley-gif.gif);
   background-size: cover;
   background-repeat: no-repeat;
+} */
+
+html,body {
+  height: 100%;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  background-color: blue;
+  color: white;
 }
 
 .question {
-  display: center !important;
   color: white;
   font-size: 36px;
 }
 
 .button {
+  margin-top: 15px;
   color: white;
   font-size: 18px;
-}
-
-.textarea {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
 }
