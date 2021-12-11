@@ -4,12 +4,6 @@ p {
   font-family: Lato;
 }
 
-* {
-  background-image: url(https://bestanimations.com/media/fall/1535493271falling-leaves-tree-alley-gif.gif);
-  background-size: cover;
-  background-repeat: no-repeat;
-} 
-
 .container {
   display: flex;
   flex-direction: column;
@@ -19,14 +13,19 @@ p {
   background-color: blue;
   color: white;
   justify-content: center;
+  background-image: url(https://bestanimations.com/media/fall/1535493271falling-leaves-tree-alley-gif.gif);
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 .question {
+  text-shadow: 2px 2px red;
   color: white;
-  font-size: 36px;
+  font-size: 24px;
 }
 
 .button {
+  color: black;
   margin-top: 25px;
   font-size: 18px;
 }
