@@ -1,55 +1,57 @@
-import React, { Component } from "react";
+import React, { useState } from "react";
+import "./style.css";
 
-class homepage extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      firstDialogue: "How are you doing today?",
-      secondDialogue: "Go ahead, I'm listening...",
-    };
-  }
+const firstDialog = "First Dialog";
+const secondDialog = "Second Dialog";
+const thirdDialog = "Third Dialog";
 
-  // what I'm trying to target the userInput with
-  handleChange = (event) => {
-    this.setState({ inputValue: event.target.value });
+export default function App() {
+  const [textValue, setTextValue] = useState("");
+
+  const handleChange = (event) => {
+    setTextValue(event.target.value);
   };
 
-  // Attempting to create a function to dynamically change the initial question based on userinput character count
+  let dialog = firstDialog;
+  let bgColor = "yellow";
 
-  // opening = () => {
-  //   if ((inputValue: event.target.value) =< 10) {
-  //     return {this.state.firstDialogue}
-  //   }
-  //   else ((inputValue: event.target.value) > 10) {
-  //     return {this.state.secondDialogue}
-  // }}
-
-
-  render() {
-    return (
-      <div>
-        <div
-          style={{
-            display: "flex",
-            alignItems: "center",
-            justifyContent: "center",
-            background: "yellow",
-            
-          }}
-        >
-          <form>
-            <p>{this.state.firstDialogue}</p>
-            <textarea
-              style={{ width: 750, height: 250 }}
-              placeholder="Tell me what happened..."
-              onChange={this.handleChange}
-            ></textarea>
-            <button type="submit">I'll tell you what I think</button>
-          </form>
-        </div>
-      </div>
-    );
+  if (textValue.length > 20) {
+    dialog = secondDialog;
+    bgColor = "cyan";
   }
-}
 
-export default homepage;
+  if (textValue.length > 50) {
+    dialog = thirdDialog;
+    bgColor = "red";
+  }
+
+  return (
+    <div>
+      <div
+        style={{
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "center",
+          background: bgColor,
+        }}
+      >
+        <form>
+          <p>{dialog}</p>
+          <textarea
+            style={{
+              width: 750,
+              height: 250,
+              display: "block",
+              marginLeft: "auto",
+              marginRight: "auto",
+            }}
+            placeholder="Tell me what happened..."
+            value={textValue}
+            onChange={handleChange}
+          ></textarea>
+          <button type="submit">I'll tell you what I think</button>
+        </form>
+      </div>
+    </div>
+  );
+}
