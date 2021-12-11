@@ -14,19 +14,16 @@
   position:relative; 
 } */
 
-h1, p {
-    font-family: Lato;
-  }
+h1,
+p {
+  font-family: Lato;
+}
 
 /* * {
   background-image: url(https://bestanimations.com/media/fall/1535493271falling-leaves-tree-alley-gif.gif);
   background-size: cover;
   background-repeat: no-repeat;
 } */
-
-html,body {
-  height: 100%;
-}
 
 .container {
   display: flex;
