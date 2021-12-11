@@ -1,42 +1,34 @@
-/* *{
-  box-sizing: border-box;
-  margin: 10;
-  padding: 5;
-  border: 1px solid red;
-  background-color: yellow;
-}
-
-.form-box{
-  min-width: 100%;
-  border: 10px #F55A00 1vw;
-  margin: 0vw;
-  padding: 10vw ;
-  position:relative; 
-} */
 
 h1, p {
     font-family: Lato;
   }
 
-/* * {
+* {
   background-image: url(https://bestanimations.com/media/fall/1535493271falling-leaves-tree-alley-gif.gif);
   background-size: cover;
   background-repeat: no-repeat;
-} */
+} 
 
 html,body {
   height: 100%;
+  width: auto;
+
 }
+
+#root {
+  height:100%;
+}
+
 
 .container {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
   width: 100%;
   height: 100%;
   background-color: blue;
   color: white;
+  justify-content: center;
 }
 
 .question {
@@ -45,7 +37,6 @@ html,body {
 }
 
 .button {
-  margin-top: 15px;
-  color: white;
+  margin-top: 25px;
   font-size: 18px;
 }

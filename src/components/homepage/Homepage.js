@@ -26,19 +26,18 @@ export default function App() {
   }
 
   return (
-    <div>
-      <div className="container">
-        <p>{dialog}</p>
-        <textarea
-          style={{ background: bgColor }}
-          rows="15"
-          cols="75"
-          placeholder="Tell me what happened..."
-          value={textValue}
-          onChange={handleChange}
-        ></textarea>
-        <button type="submit">I'll tell you what I think</button>
-      </div>
+    <div className="container">
+      <p>{dialog}</p>
+      <textarea
+        style={{ background: bgColor }}
+        rows="15"
+        cols="75"
+        placeholder="Tell me what happened..."
+        value={textValue}
+        onChange={handleChange}
+      ></textarea>
+
+      <button type="submit">I'll tell you what I think</button>
     </div>
   );
 }
